@@ -159,34 +159,19 @@ class balancedBST{
 // Test the implementation
 const bst = new balancedBST();
 
-// Insert nodes
-console.log("Inserting nodes: 10, 20, 30, 40, 50, 25");
-bst.insert(10);
-bst.insert(20);
-bst.insert(30);
-bst.insert(40);
-bst.insert(50);
-bst.insert(25);
+// Insert nodes from 1 to 500
+for(let i = 1; i <= 500; i ++) bst.insert(i);
 
 console.log("Inorder traversal after insertion:", bst.inOrderTraversal());
 
+// Delete nodes from 100 to 400
+for(let i = 100; i <= 400; i ++) bst.delete(i);
+
+console.log("Inorder traversal after deletion from 100 to 400", bst.inOrderTraversal());
+
+
 // Search for a value
-console.log("Searching for value 30:", bst.search(30) ? "Found" : "Not found");
-console.log("Searching for value 60:", bst.search(60) ? "Found" : "Not found");
-
-// Update a value
-console.log("Updating 30 to 35");
-bst.update(30, 35);
-console.log("Inorder traversal after update:", bst.inOrderTraversal());
-
-// Delete nodes
-console.log("Deleting node with value 20");
-bst.delete(20);
-console.log("Inorder traversal after deletion:", bst.inOrderTraversal());
-
-// Try to update a non-existent value
-console.log("Trying to update non-existent value 30 to 45:", 
-  bst.update(30, 45) ? "Updated" : "Value not found");
+console.log("Searching for value 300:", bst.search(300) ? "Found" : "Not found");
+console.log("Searching for value 405:", bst.search(405) ? "Found" : "Not found");
 
 
-// Thank you 
